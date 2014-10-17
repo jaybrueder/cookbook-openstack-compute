@@ -34,7 +34,7 @@ execute 'nova-manage db sync' do
   action :run
 end
 
-case node['openstack']['compute']['network']['service_type']
+case 'nova'
 when 'nova'
 
   next_vlan = 100

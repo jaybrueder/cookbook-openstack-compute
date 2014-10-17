@@ -27,7 +27,7 @@ platform_options = node['openstack']['compute']['platform']
 # neutron, the network will be setup by the inclusion of
 # openstack-network recipes
 
-if node['openstack']['compute']['network']['service_type'] == 'nova'
+if 'nova' == 'nova'
 
   platform_options['compute_network_packages'].each do |pkg|
     package pkg do

@@ -111,7 +111,7 @@ Chef::Log.debug("openstack-compute::nova-common:ec2_public_endpoint|#{ec2_public
 Chef::Log.debug("openstack-compute::nova-common:network_endpoint|#{network_endpoint.to_s}")
 Chef::Log.debug("openstack-compute::nova-common:image_endpoint|#{image_endpoint.to_s}")
 
-if node['openstack']['compute']['network']['service_type'] == 'neutron'
+if 'nova' == 'neutron'
   neutron_admin_password = get_password 'service', 'openstack-network'
   neutron_metadata_proxy_shared_secret = get_secret 'neutron_metadata_secret'
 end
