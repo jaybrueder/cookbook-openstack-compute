@@ -5,6 +5,8 @@
 default['enable_monit'] = false  # OS provides packages
 ########################################################################
 
+default['openstack']['compute']['network']['service_type'] = "nova"
+
 # Set to some text value if you want templated config files
 # to contain a custom banner at the top of the written file
 default['openstack']['compute']['custom_template_banner'] = '
